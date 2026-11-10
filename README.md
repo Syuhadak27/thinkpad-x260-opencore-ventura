@@ -1,68 +1,84 @@
 <!-- Name Card -->
-![x260 Hackintosh](https://cardivo.vercel.app/api?name=x260%20hackintosh&description=ThinkPad%20x260%20running%20macOS&image=https://raw.githubusercontent.com/SuhailSherief/ThinkPad-x260-macOS-OpenCore/main/screenshot/pfp.jpeg&backgroundColor=%22272E&pattern=hideout&colorPattern=%231abc9c&opacity=0.05&fontColor=%23eff4f6)
-## Specification
-Specification | Configuration
------------ | -----------
-Processor | Intel Core i7-6500U
-Integrated Graphics | Intel HD Graphics 520
-Memory | SK-Hynix 8GB DDR4
-Storage | 512GB WD Blue HDD Sata
-Wireless Card | Intel AC-8260 Dual Band + Bluetooth
-Bootloader | OpenCore
-Bootloader Ver. | v0.8.6
+![x260 Hackintosh](https://cardivo.vercel.app/api?name=x260%20hackintosh&description=ThinkPad%20X260%20running%20macOS%20Ventura&image=https://raw.githubusercontent.com/SuhailSherief/ThinkPad-x260-macOS-OpenCore/main/screenshot/pfp.jpeg&backgroundColor=%22272E&pattern=hideout&colorPattern=%231abc9c&opacity=0.05&fontColor=%23eff4f6)
+
+# ThinkPad X260 — macOS Ventura (OpenCore)
+
+EFI OpenCore untuk Lenovo ThinkPad X260 dengan prosesor Intel Core i5 generasi ke-6. Utamanya untuk macOS Ventura, tapi juga mendukung Monterey dan Big Sur.
+
+## Spesifikasi
+| Spesifikasi | Konfigurasi |
+| ----------- | ----------- |
+| Laptop | Lenovo ThinkPad X260 |
+| Prosesor | Intel Core i5 6th Gen (Skylake) |
+| Grafis Terintegrasi | Intel HD Graphics 520 |
+| Memori | 8GB DDR4 |
+| Penyimpanan | SSD SATA |
+| Kartu Wireless | Intel AC-8260 Dual Band + Bluetooth |
+| Bootloader | OpenCore |
+| Versi Bootloader | v0.8.6 |
+
 ## Screenshot
 <p align="center">
-  <kbd><br>M O N T E R E Y
+  <kbd><br>V E N T U R A &nbsp; 1
   <br><br>
-  <kbd><img src="https://raw.githubusercontent.com/SuhailSherief/ThinkPad-x260-macOS-OpenCore/main/screenshot/main.png"/></kbd></kbd>
-<p align="center">
-  <kbd><br>B A T T E R Y
-  <br><br>
-  <kbd><img src="https://raw.githubusercontent.com/SuhailSherief/ThinkPad-x260-macOS-OpenCore/main/screenshot/m1.png"/></kbd></kbd>
+  <kbd><img src="images/ventura_1.jpg"/></kbd></kbd>
 </p>
 <p align="center">
-  <kbd><br>S T A T S
+  <kbd><br>V E N T U R A &nbsp; 2
   <br><br>
-  <kbd><img src="https://raw.githubusercontent.com/SuhailSherief/ThinkPad-x260-macOS-OpenCore/main/screenshot/m2.png"/></kbd></kbd>
+  <kbd><img src="images/ventura_2.jpg"/></kbd></kbd>
+</p>
+<p align="center">
+  <kbd><br>V E N T U R A &nbsp; 3
+  <br><br>
+  <kbd><img src="images/ventura_3.jpg"/></kbd></kbd>
 </p>
 
-### Before you start
-Follow dortania guide on how to create a recovery usb for MacOS installation.
-You can find the MacOS installation guide at the following link, [`click here`](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#downloading-macos)
+## Apa yang Berfungsi?
+- QE/CI Intel HD Graphics 520 `Ventura`
+- Power Management CPU `Ventura`
+- Sleep, Shutdown, Restart `Ventura`
+- Audio Speaker & Earphone `Ventura`
+- WiFi (Intel AC-8260) `Ventura`
+- Bluetooth `Ventura`
+- Trackpad, TrackPoint, Gestur `Ventura`
+- Keyboard & Tombol Fn `Ventura`
+- Indikator Baterai `Ventura`
+- Tombol Brightness `Ventura`
+- Kamera `Ventura`
+- Port USB `Ventura`
+- SD Card Reader `Ventura`
+- dll
 
-## MacOS
-- Ventura (Tested, OpenCore)
-- Monterey (Tested, OpenCore)
-- Bigsur (Tested, OpenCore)
+## Tidak Berfungsi
+- Fingerprint Reader — tidak didukung macOS
+- AirDrop / Handoff / Continuity — tidak didukung kartu WiFi Intel
 
-> Airportitwlm is preconfigured based on the branch you use.
-> If you face any issues try different versions. Kexts for BigSur, Monterey and Ventura already available.
-> Just Enable and Disable accordingly in config.plist.
+## Versi macOS
+- Ventura (Ditest, OpenCore)
+- Monterey (Ditest, OpenCore)
+- Big Sur (Ditest, OpenCore)
 
-# Bios
+> AirportItlwm sudah dikonfigurasi berdasarkan versi macOS yang dipakai.
+> Jika ada masalah, coba versi lain. Kext untuk Big Sur, Monterey dan Ventura sudah tersedia.
+> Cukup Enable dan Disable sesuai kebutuhan di config.plist.
+
+## Pengaturan BIOS
 - `Security -> Security Chip`: **Disabled**;
 - `Memory Protection -> Execution Prevention`: **Enabled**;
 - `Virtualization -> Intel Virtualization Technology`: **Enabled**;
 - `Virtualization -> Vt-directed IO`: **Disabled**;
-- `Internal Device Access -> Bottom Cover Tamper Detection`: must be **Disabled**;
+- `Internal Device Access -> Bottom Cover Tamper Detection`: harus **Disabled**;
 - `Anti-Theft -> Computrace -> Current Setting`: **Disabled**;
 - `Secure Boot -> Secure Boot`: **Disabled**;
 - `UEFI/Legacy Boot`: **UEFI Only**;
 - `CSM Support`: **No**.
 
-## What's Working?
-- QE/CI Intel HD Graphics 520 `BigSur` `Monterey` `Ventura`
-- Power Management `BigSur` `Monterey` `Ventura`
-- Sleep, Shutdown, Restart `BigSur` `Monterey` `Ventura`
-- Audio Speaker & Earphone `BigSur` `Monterey` `Ventura`
-- Bluetooth `BigSur` [`Monterey`](https://github.com/SuhailSherief/ThinkPad-x260-macOS-OpenCore/issues/3) `Ventura`
-- Trackpad, Trackball, Gestures `BigSur` `Monterey` `Ventura`
-- Battery Indicator `BigSur` `Monterey` `Ventura`
-- Camera `BigSur` `Monterey` `Ventura`
-- Dock station [`BigSur` `Monterey`](https://github.com/SuhailSherief/ThinkPad-x260-macOS-OpenCore/issues/2) `Ventura`
-- etc
+## Sebelum Memulai
+Ikuti panduan Dortania untuk membuat USB installer macOS (recovery).
+Panduan instalasi macOS bisa ditemukan di link berikut, [`klik di sini`](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#downloading-macos)
 
-## Credits:
+## Kredit:
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide/)
 - [Simprecicchiani](https://github.com/simprecicchiani)
 - [WinLinMacTutorials](https://www.youtube.com/channel/UCR51utxUtFk8OJQP_bBBJsw)

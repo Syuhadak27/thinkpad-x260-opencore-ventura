@@ -33,8 +33,28 @@ EFI OpenCore untuk Lenovo ThinkPad X260 dengan prosesor Intel Core i5 generasi k
   <br><br>
   <kbd><img src="images/ventura_3.jpg"/></kbd></kbd>
 </p>
+<p align="center">
+  <kbd><br>V E N T U R A &nbsp; 4
+  <br><br>
+  <kbd><img src="images/ventura_4.jpg"/></kbd></kbd>
+</p>
+<p align="center">
+  <kbd><br>V E N T U R A &nbsp; 5
+  <br><br>
+  <kbd><img src="images/ventura_5.jpg"/></kbd></kbd>
+</p>
+<p align="center">
+  <kbd><br>V E N T U R A &nbsp; 6
+  <br><br>
+  <kbd><img src="images/ventura_6.jpg"/></kbd></kbd>
+</p>
+<p align="center">
+  <kbd><br>V E N T U R A &nbsp; 7
+  <br><br>
+  <kbd><img src="images/ventura_7.jpg"/></kbd></kbd>
+</p>
 
-## Apa yang Berfungsi?
+## Apa yang Berfungsi ?
 - QE/CI Intel HD Graphics 520 `Ventura`
 - Power Management CPU `Ventura`
 - Sleep, Shutdown, Restart `Ventura`
